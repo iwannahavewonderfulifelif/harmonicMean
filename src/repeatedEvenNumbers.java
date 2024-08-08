@@ -1,9 +1,11 @@
 import java.util.Arrays;
 
 public class repeatedEvenNumbers {
+
         static boolean isFind(int[] arr,int value){
             for (int i:arr){
                 if(i==value) {
+
                     return true;
                 }
 
@@ -12,6 +14,7 @@ public class repeatedEvenNumbers {
         }
 
     public static void main(String[] args) {
+        int amount = 0;
 
         int[] list = {1, 2, 3, 2, 4, 7, 4, 7, 8, 8, 9, 9, 0, 0};
 
@@ -24,12 +27,11 @@ public class repeatedEvenNumbers {
         }
 
 
-
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list.length; j++) {
                 if (i != j && list[i] == list[j]) {
-                    if(!isFind(duplicate,list[i])) {
-                    duplicate[startIndex++] = list[i];
+                    if (!isFind(duplicate, list[i])) {
+                        duplicate[startIndex++] = list[i];
                     }
                     break;
                 }
